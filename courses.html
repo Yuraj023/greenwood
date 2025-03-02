@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greenwood University - Programs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header-main">
+    <div class="container header-container">
+      <img src="background.png" alt="Greenwood University Logo" class="logo" />
+      <nav class="main-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html" class="active">Programs</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="apply.html" class="btn">Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Programs Hero Section -->
+    <section class="programs-hero">
+      <div class="container">
+        <h1>Explore Our Programs</h1>
+        <p>Discover a wide range of undergraduate, graduate, and professional programs designed to help you achieve your goals.</p>
+      </div>
+    </section>
+
+    <!-- Programs Filter Section -->
+    <section class="programs-filter">
+      <div class="container">
+        <h2>Find Your Program</h2>
+        <div class="filter-options">
+          <button class="filter-btn active" data-filter="all">All Programs</button>
+          <button class="filter-btn" data-filter="undergraduate">Undergraduate</button>
+          <button class="filter-btn" data-filter="graduate">Graduate</button>
+          <button class="filter-btn" data-filter="professional">Professional</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Listing Section -->
+    <section class="programs-listing">
+      <div class="container">
+        <div class="program-grid">
+          <!-- Undergraduate Programs -->
+          <div class="program-card undergraduate">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p>Gain practical and theoretical knowledge to excel in the tech industry. Learn programming, software development, and data analysis.</p>
+            <a href="computer-science.html" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="program-card undergraduate">
+            <i class="fas fa-briefcase"></i>
+            <h3>Bachelor of Arts in Business Administration</h3>
+            <p>Develop strong leadership and management skills for a dynamic career in business and entrepreneurship.</p>
+            <a href="business-admin.html" class="btn btn-outline">Learn More</a>
+          </div>
+
+          <!-- Graduate Programs -->
+          <div class="program-card graduate">
+            <i class="fas fa-cogs"></i>
+            <h3>Master of Science in Engineering</h3>
+            <p>Advance your career with specialized training in modern engineering practices and cutting-edge research.</p>
+            <a href="engineering.html" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="program-card graduate">
+            <i class="fas fa-microscope"></i>
+            <h3>Master of Science in Biotechnology</h3>
+            <p>Explore the frontiers of biological sciences and prepare for a career in research, healthcare, or pharmaceuticals.</p>
+            <a href="biotechnology.html" class="btn btn-outline">Learn More</a>
+          </div>
+
+          <!-- Professional Programs -->
+          <div class="program-card professional">
+            <i class="fas fa-chart-line"></i>
+            <h3>Executive MBA</h3>
+            <p>Designed for working professionals, this program offers advanced business training and leadership development.</p>
+            <a href="executive-mba.html" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="program-card professional">
+            <i class="fas fa-gavel"></i>
+            <h3>Juris Doctor (JD)</h3>
+            <p>Prepare for a successful legal career with our rigorous and comprehensive law program.</p>
+            <a href="juris-doctor.html" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Apply now and take the first step toward a brighter future.</p>
+        <a href="apply.html" class="btn btn-primary">Apply Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-section">
+        <img src="background.png" alt="Greenwood University Logo" class="footer-logo">
+        <p>Committed to Excellence in Higher Education Since 1965</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">Campus Tour</a></li>
+          <li><a href="courses.html">Academic Programs</a></li>
+          <li><a href="financial-aid.html">Financial Aid</a></li>
+          <li><a href="news.html">University News</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>Admissions Office Hours:<br>Mon-Fri 8:30 AM - 5:00 PM PST</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Greenwood University. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="accessibility.html">Accessibility</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Filtering -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const programCards = document.querySelectorAll('.program-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const filter = button.getAttribute('data-filter');
+
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+
+          // Filter programs
+          programCards.forEach(card => {
+            if (filter === 'all' || card.classList.contains(filter)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

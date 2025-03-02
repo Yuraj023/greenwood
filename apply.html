@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greenwood University - Apply Now</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header-main">
+    <div class="container header-container">
+      <img src="background.png" alt="Greenwood University Logo" class="logo" />
+      <nav class="main-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Programs</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="apply.html" class="btn active">Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Apply Hero Section -->
+    <section class="apply-hero" style="background: linear-gradient(rgba(0, 64, 128, 0.8), rgba(0, 64, 128, 0.8)), url('campus.jpg') no-repeat center center/cover; color: #fff; padding: 100px 0; text-align: center;">
+      <div class="container">
+        <h1>Apply to Greenwood University</h1>
+        <p>Begin your journey to academic excellence by filling out our application form.</p>
+      </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="application-form-section" style="padding: 40px 0; background: #fff;">
+      <div class="container">
+        <h2 style="color: #004080; text-align: center; margin-bottom: 30px;">Application Form</h2>
+        <form action="submit_application.php" method="post" class="application-form" style="display: flex; flex-direction: column; gap: 15px;">
+          <div class="form-row" style="display: flex; gap: 15px;">
+            <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+              <label for="firstName" style="margin-bottom: 5px; color: #004080;">First Name</label>
+              <input type="text" id="firstName" name="firstName" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            </div>
+            <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+              <label for="lastName" style="margin-bottom: 5px; color: #004080;">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            </div>
+          </div>
+          <div class="form-row" style="display: flex; gap: 15px;">
+            <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+              <label for="email" style="margin-bottom: 5px; color: #004080;">Email Address</label>
+              <input type="email" id="email" name="email" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            </div>
+            <div class="form-group" style="flex: 1; display: flex; flex-direction: column;">
+              <label for="phone" style="margin-bottom: 5px; color: #004080;">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            </div>
+          </div>
+          <div class="form-group" style="display: flex; flex-direction: column;">
+            <label for="program" style="margin-bottom: 5px; color: #004080;">Program of Interest</label>
+            <select id="program" name="program" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+              <option value="">Select a Program</option>
+              <option value="computer-science">Bachelor of Science in Computer Science</option>
+              <option value="business-administration">Bachelor of Arts in Business Administration</option>
+              <option value="engineering">Master of Science in Engineering</option>
+              <option value="biotechnology">Master of Science in Biotechnology</option>
+              <option value="executive-mba">Executive MBA</option>
+              <option value="juris-doctor">Juris Doctor (JD)</option>
+            </select>
+          </div>
+          <div class="form-group" style="display: flex; flex-direction: column;">
+            <label for="message" style="margin-bottom: 5px; color: #004080;">Additional Information</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about yourself..." required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; resize: vertical; min-height: 150px;"></textarea>
+          </div>
+          <button type="submit" style="background: #004080; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; transition: background 0.3s;">Submit Application</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-section">
+        <img src="background.png" alt="Greenwood University Logo" class="footer-logo" />
+        <p>Committed to Excellence in Higher Education Since 1965</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">Campus Tour</a></li>
+          <li><a href="courses.html">Academic Programs</a></li>
+          <li><a href="financial-aid.html">Financial Aid</a></li>
+          <li><a href="news.html">University News</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>Admissions Office Hours:<br>Mon-Fri 8:30 AM - 5:00 PM PST</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Greenwood University. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="accessibility.html">Accessibility</a></p>
+    </div>
+  </footer>
+</body>
+</html>
